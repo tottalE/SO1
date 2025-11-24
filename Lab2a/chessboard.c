@@ -9,7 +9,7 @@
 #define SIZE 8
 
 int main(void)
-{
+{	
 	for (int i = SIZE; i >= 1; i--)
 	{
 		printf("+----+----+----+----+----+----+----+----+\n|");

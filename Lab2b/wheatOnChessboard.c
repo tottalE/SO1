@@ -9,20 +9,27 @@
 
 int main(void)
 {
-	unsigned long long product = 1; // number of grains
+	double wGrain = 7.358e17;
+	double product = 1; // number of grains
 	double total = 0; // sum of grains
 
-	printf("Field |  On field  | Sum\n");
-	printf("------+------------+----------------\n");
+	printf("Field |       On field       |     Sum\n");
 	
-	for (int i = 0; i < 67; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
+		if (i % 8 == 0)
+			printf("------+----------------------+----------------------\n");
+
 		if (i != 0)
 			product = product * 2;
 
 		total += product;
-		printf("%5llu | %10llu | %.f (= %.1e)\n", i + 1, product, total, total);
+
+		printf("%5.0d | %20.f | %.f (= %.1e)\n", i + 1, product, total, total);
 	}
+	printf("------+----------------------+----------------------\n\n");
+
+	printf("relation p : %f", product * 55 / wGrain);
 
 	return 0;
 }
