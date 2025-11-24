@@ -18,17 +18,18 @@ int main(void)
 	for (int i = 0; i < SIZE; i++)
 	{
 		if (i % 8 == 0)
-			printf("------+----------------------+----------------------\n");
+			printf("------+----------------------+--------------------------------\n");
 
 		if (i != 0)
 			product = product * 2;
 
 		total += product;
 
-		printf("%5.0d | %20.f | %.f (= %.1e)\n", i + 1, product, total, total);
+		printf("%5.0d | %20.f | %20.f (= %.1e)\n", i + 1, product, total, total);
 	}
-	printf("------+----------------------+----------------------\n\n");
+	printf("------+----------------------+--------------------------------\n\n");
 
+	printf("overall weight: %f", total);
 	printf("relation p : %f", product * 55 / wGrain);
 
 	return 0;
