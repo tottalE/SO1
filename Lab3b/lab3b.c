@@ -6,7 +6,8 @@ Distances*/
 #include <stdio.h>  // include standard input/output header file for printf and getchar
 #include <math.h>   // include math library for fabs(), cos(), sin(), acos(), sqrt()
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include "lab3b.h"
+
 
 // Step 1: Function prototypes
 // These functions compute distances between two geographic locations.
