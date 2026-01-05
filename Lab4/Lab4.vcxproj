@@ -144,6 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../Lab3b</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -177,12 +178,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Lab3b\lab3b.c" />
     <ClCompile Include="lab4.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lab3b\Lab3b.vcxproj">
-      <Project>{8436c2c5-5889-4060-9a87-3723f1bf034f}</Project>
-    </ProjectReference>
+    <ClInclude Include="..\Lab3b\lab3b.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

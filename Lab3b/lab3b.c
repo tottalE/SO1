@@ -3,64 +3,16 @@
 15.1 Theory: Geographic coordinates and distances
 Distances*/
 
-#include <stdio.h>  // include standard input/output header file for printf and getchar
-#include <math.h>   // include math library for fabs(), cos(), sin(), acos(), sqrt()
 #define _USE_MATH_DEFINES
+#include <stdio.h> // include standard input/output header file for printf and getchar
+#include <math.h> // include math library for fabs(), cos(), sin(), acos(), sqrt()
 #include "lab3b.h"
-
 
 // Step 1: Function prototypes
 // These functions compute distances between two geographic locations.
 double localDistanceKm(double, double, double, double);
 double distanceKm(double, double, double, double);
 
-int main(void) // main function - starting point of the program
-{
-	// Step 2: Declare variables to store distances
-	double localDist;
-	double globalDist;
-
-	// Step 3: Declare coordinates for HAW Hamburg and Eiffel Tower
-	// Latitude and longitude values are given in Table 15.1
-	// HAW Hamburg
-	double hamburgLat = 53.557078;
-	double hamburgLon = 10.023109;
-	// Eiffel Tower
-	double eiffelLat = 48.858363;
-	double eiffelLon = 2.294481;
-
-	// Palma de Mallorca
-	double palmaLat = 39.562553;
-	double palmaLon = 2.661947;
-
-	// Las Vegas
-	double vegasLat = 36.156214;
-	double vegasLon = -115.148736;
-
-	// Copacabana
-	double copaLat = -22.971177;
-	double copaLon = -43.182543;
-
-	// Waikiki Beach
-	double waikikiLat = 21.281004;
-	double waikikiLon = -157.837456;
-
-	// Surfer's Paradise
-	double surferLat = -28.002695;
-	double surferLon = 153.431781;
-
-	// Step 4: Call the distance functions and store their results
-	localDist = localDistanceKm(hamburgLat, hamburgLon, eiffelLat, eiffelLon);
-	globalDist = distanceKm(hamburgLat, hamburgLon, eiffelLat, eiffelLon);
-
-	// Step 5: Print results (with one decimal place)
-	printf("Local distance (15.3) from HAW Hamburg to Eiffel Tower: %.1f km\n", localDist);
-	printf("Global distance (15.4) from HAW Hamburg to Eiffel Tower %.1f km\n", globalDist);
-
-	// Step 6: Pause before exiting (useful in Windows console)
-	getchar();
-	return 0;
-}
 
 // Function: localDistanceKm
 // Purpose : Calculate approximate distance using Pythagoras (formula 15.3)

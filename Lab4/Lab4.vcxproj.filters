@@ -18,5 +18,13 @@
     <ClCompile Include="lab4.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Lab3b\lab3b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Lab3b\lab3b.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
